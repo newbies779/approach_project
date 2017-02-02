@@ -240,20 +240,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.js"></script>
 
 <script>
-    (function() {
-        var burger = document.querySelector('.nav-toggle');
-        var menu = document.querySelector('.nav-menu');
-        burger.addEventListener('click', function() {
-            burger.classList.toggle('is-active');
-            menu.classList.toggle('is-active');
-        });
-
-        $("#top-nav").sticky({topSpacing:0});
-
-    })();
-</script>
-
-<script>
     //Article categories
     Vue.component('article-category', {
         props: [],
@@ -297,7 +283,7 @@
 
 
     });
-    
+
     //Message component
     Vue.component('message', {
         props: ['header','message','color'],
@@ -515,5 +501,21 @@
                 }
 
             });
-        </script>
-        @stop
+
+    </script>
+
+
+    <script>
+    $( document ).ready(function() {
+        var burger = document.querySelector('.nav-toggle');
+        var menu = document.querySelector('.nav-menu');
+        burger.addEventListener('click', function() {
+            burger.classList.toggle('is-active');
+            menu.classList.toggle('is-active');
+        });
+
+        $("#top-nav").sticky({topSpacing:0});
+    });
+    </script>
+
+@stop
