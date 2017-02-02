@@ -12,4 +12,7 @@ const { mix } = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+   .sass('resources/assets/sass/app.scss', 'public/css')
+   .sass('resources/assets/bulma/bulma.sass', 'public/css')
+   .sass('resources/assets/sass/bulma/bulma.sass', 'public/css/bulma1.css')
+   .sass('resources/assets/sass/bulma/bulma.scss', 'public/css/bulma2.css');

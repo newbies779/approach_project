@@ -1,0 +1,13 @@
+$black-stroke              : #d8d9d8;
+
+aside {
+	ul {
+		li {
+			border-bottom: 1px solid $black-stroke
+		}
+	}
+}
+
+.flex-container-important {
+	display: flex !important;
+}
