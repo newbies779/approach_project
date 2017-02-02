@@ -506,6 +506,7 @@
 
 
     <script>
+    //bulma.js
     $( document ).ready(function() {
         var burger = document.querySelector('.nav-toggle');
         var menu = document.querySelector('.nav-menu');
