@@ -97,10 +97,6 @@
                 </div>
             </div>
         </section>
-        
-
-        <!-- Scripts -->
-        <script src="/js/app.js"></script>
     </div>
 </body>
 </html>

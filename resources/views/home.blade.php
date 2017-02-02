@@ -1,51 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container is-hidden-mobile">
-    <div class="nav-left">
-        <a class="nav-item">
-            <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
-        </a>
-    </div>
-</div>
-
-<nav class="nav has-shadow" id="top-nav">
-    <div class="container">
-
-        <span class="nav-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </span>
-        <a class="nav-item is-hidden-tablet">
-            <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
-        </a>
-
-        <div class="nav-left">
-            <a class="nav-item is-tab is-hidden-mobile is-active">Home</a>
-            <a class="nav-item is-tab is-hidden-mobile">Features</a>
-            <a class="nav-item is-tab is-hidden-mobile">Pricing</a>
-            <a class="nav-item is-tab is-hidden-mobile">About</a>
-        </div>
-
-        <div class="nav-right nav-menu is-hidden-tablet ">
-            <a class="nav-item is-tab is-hidden-tablet is-active">Home</a>
-            <a class="nav-item is-tab is-hidden-tablet">Features</a>
-            <a class="nav-item is-tab is-hidden-tablet">Pricing</a>
-            <a class="nav-item is-tab is-hidden-tablet">About</a>
-        </div>
-
-        <div class="nav-right">
-            <a class="nav-item is-tab is-hidden-mobile">
-                <figure class="image is-16x16" style="margin-right: 8px;">
-                    <img src="http://bulma.io/images/jgthms.png">
-                </figure>
-                Profile
-            </a>
-            <a class="nav-item is-tab is-hidden-mobile">Log out</a>
-        </div>
-    </div>
-</nav>
 
 <section class="section is-hidden-tablet flex-container fxf-colw f-ai-c">
 
@@ -219,27 +174,148 @@
                 <template slot="body">Hello body</template>
             </message>
 
-            <btn-trigger-modal id='#asdasd'>
-            </btn-trigger-modal>
-
             <bulma-modal>
                 <template slot="header">TEST</template>
                 <template slot="body">testsetset</template>
             </bulma-modal>
 
         </div>
-
     </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-one-third-tablet">
+                    <div class="block">
+                        <figure class="image is-square">
+                            <img src="http://bulma.io/images/placeholders/1280x960.png">
+                        </figure>
+                    </div>
+                    <div class="block">
+                        <figure class="image is-square">
+                            <img src="http://bulma.io/images/placeholders/1280x960.png">
+                        </figure>
+                    </div>
+                </div>
+                <form action="/home">
+                    <div class="column">
+                        <div class="box">
+                            <div class="control is-grouped block">
+                                <p class="control is-expanded">
+                                    <input class="input" type="text" placeholder="FirstName" required>
+                                </p>
+                                <p class="control is-expanded">
+                                    <input class="input" type="text" placeholder="LastName" required>
+                                </p>
+                            </div>
+
+                            <p class="control is-expanded block">
+                                <input class="input" type="text" placeholder="ID No.">
+                            </p>
+                            
+                            <p class="control has-icon has-icon-right block">
+                                <input class="input" type="text" placeholder="Email" value="">
+                                <span class="icon is-small">
+                                    <i class="fa fa-envelope"></i>
+                                </span>
+                                {{-- <span class="help is-success">This username is available</span> --}}
+                            </p>
+
+                            <div class="control is-grouped block">
+                                <p class="control has-icon has-icon-right is-expanded">
+                                    <input class="input" type="password" placeholder="Password" required>
+                                    <span class="icon is-small">
+                                        <i class="fa fa-warning is-hidden"></i>
+                                    </span>
+                                </p>
+                                <p class="control has-icon has-icon-right is-expanded">
+                                    <input class="input" type="password" placeholder="Repeat Password" required>
+                                    <span class="icon is-small">
+                                        <i class="fa fa-warning is-hidden"></i>
+                                    </span>
+                                </p>
+                            </div>
+                            
+                            <div class="control is-grouped block">
+
+                                <p class="control is-expanded">
+                                    <input class="input" type="number" placeholder="Age" required>
+                                </p>
+
+                                <p class="control is-expanded">
+                                    <input class="input" type="tel" placeholder="PhoneNumber">
+                                </p>
+                                
+                                <p class="control">
+                                    <span class="select">
+                                        <select>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                        </select>
+                                    </span>
+                                </p>
+                                
+                                <p class="control">
+                                    <span class="select">
+                                        <select>
+                                            <option>A</option>
+                                            <option>B</option>
+                                            <option>O</option>
+                                            <option>...</option>
+                                        </select>
+                                    </span>
+                                </p>
+                            </div>
+                            
+                            <p class="control is-expanded block">
+                                <textarea class="textarea" placeholder="Congenital Disease"></textarea>
+                            </p>
+
+                            <p class="control is-expanded block">
+                                <textarea class="textarea" placeholder="Allergic"></textarea>
+                            </p>
+                            
+                            <button class="button is-primary is-outlined is-fullwidth" type="submit">Submit</button>
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero is-primary is-medium ">
+        <div class="hero-body">
+            <div class="container">
+
+                <h1 class="title">
+                    Subject
+                </h1>
+                <p class="control">
+                  <span class="select">
+                    <select>
+                        <option>Select dropdown</option>
+                        <option>With options</option>
+                        <option>Select dropdown</option>
+                        <option>With options</option>
+                        <option>Select dropdown</option>
+                        <option>With options</option>
+                        <option>Select dropdown</option>
+                        <option>With options</option>
+                    </select>
+                </span>
+            </p>
+        </div>
+    </div>
+</section>
 </div>
-@endsection
+
+@stop
 
 @section('script')
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.js"></script>
-
 <script>
+
     //Article categories
     Vue.component('article-category', {
         props: [],
@@ -405,6 +481,7 @@
 
                 template: `
                 <div>
+                    <a class="button is-primary" @click="isActive = !isActive">test</a>
                     <div class="modal" :class="{'is-active': isActive}">
                         <div class="modal-background"></div>
                         <div class="modal-card">
@@ -435,20 +512,45 @@
                 }
             });
 
-            Vue.component('btn-trigger-modal', {
-                props: ['id'],
+            Vue.component('bulma-modal-login', {
 
                 data() {
                     return {
-
+                        isActive: false
                     }
                 },
 
                 template: `
-                <!-- Button trigger modal -->
-                <a class="btn btn-primary" data-toggle="modal" :data-target="id">
-                </a>
+                <div>
+                    <a class="button is-primary" @click="isActive = !isActive">test</a>
+                    <div class="modal" :class="{'is-active': isActive}">
+                        <div class="modal-background"></div>
+                        <div class="modal-card">
+                            <header class="modal-card-head">
+                                <p class="modal-card-title"><slot name="header"></slot></p>
+                                <button class="delete" @click="toggleModal"></button>
+                            </header>
+
+                            <section class="modal-card-body">
+                                <slot name="body"></slot>
+                            </section>
+
+                            <footer class="modal-card-foot">
+                                <slot name="footer">
+                                    <a class="button is-primary">Okay</a>
+                                </slot>
+                                <a class="button" @click="toggleModal">Cancel</a>
+                            </footer>
+                        </div>
+                    </div>
+                </div>
                 `,
+
+                methods: {
+                    toggleModal() {
+                        this.isActive = !this.isActive;
+                    }
+                }
             });
             
             //Vue Object
@@ -502,10 +604,10 @@
 
             });
 
-    </script>
+        </script>
 
 
-    <script>
+        <script>
     //bulma.js
     $( document ).ready(function() {
         var burger = document.querySelector('.nav-toggle');
@@ -517,6 +619,6 @@
 
         $("#top-nav").sticky({topSpacing:0});
     });
-    </script>
+</script>
 
 @stop
