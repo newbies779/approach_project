@@ -41,7 +41,8 @@
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan optimize", 
-            "chmod -R 777 app/storage"
+            "chmod -R 777 app/storage",
+            "web: vendor/bin/heroku-php-apache2"
         ]
     },
     "config": {
